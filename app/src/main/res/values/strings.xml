@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">quizzz</string>
+    <string name="basement_quiz">quizzz</string>
+    <string name="welcome_text">ELLO!</string>
+    <string name="welcome_button">start policeiskiy dopros</string>
+    <string name="hint">ur name</string>
 </resources>
