@@ -11,10 +11,15 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.basdoor.quizzz.R
+import com.basdoor.quizzz.services.DataManager
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
+
+@AndroidEntryPoint
 
 class LoginFragment : Fragment() {
-
-    private var username: String = ""
+    @Inject
+    lateinit var dataManager: DataManager
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,14 +42,15 @@ class LoginFragment : Fragment() {
 
         val userTextField = view.findViewById<TextView>(R.id.username_textField)
         userTextField.doOnTextChanged { text, start, before, count ->
-            username = text.toString()
+
+            dataManager.username = text.toString()
             CheckButtonEnabled()
         }
     }
 
     private fun CheckButtonEnabled() {
         val button = view?.findViewById<Button>(R.id.login)
-        button?.isEnabled = !username.isEmpty()
+        button?.isEnabled = !dataManager.username.isEmpty()
     }
 
 }
