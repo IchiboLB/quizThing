@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.basdoor.quizzz.R
 import com.basdoor.quizzz.services.DataManager
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
+@AndroidEntryPoint
 
 class QuizFragment : Fragment() {
     @Inject
@@ -23,7 +26,7 @@ class QuizFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("username: ${dataManager.username}")
+        println("this person will find the original jtk image: ${dataManager.username}")
     }
 
 }
