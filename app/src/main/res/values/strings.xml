@@ -4,4 +4,5 @@
     <string name="welcome_button">start policeiskiy dopros</string>
     <string name="hint">ur name</string>
     <string name="welcum_quiz">Long time no see, %1$s</string>
+    <string name="next">NXT QSTN</string>
 </resources>
