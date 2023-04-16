@@ -5,4 +5,7 @@
     <string name="hint">ur name</string>
     <string name="welcum_quiz">Long time no see, %1$s</string>
     <string name="next">NXT QSTN</string>
+    <string name="score">UR RESULT: %1$s </string>
+    <string name="restart">TAKE ANOTHER DOPROS </string>
+
 </resources>
